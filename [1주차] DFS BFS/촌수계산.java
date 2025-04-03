@@ -53,6 +53,6 @@ public class Main {
                 dfs(v, s);
             }
         }
-        return visited[v2] - 1;
+        return visited[v2] - 1; 
     }
 }
