@@ -13,6 +13,7 @@ public class Main {
     static int m;
     static int v;
     public static void main(String[] args) throws IOException{
+        // 1. init
         st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
@@ -32,10 +33,13 @@ public class Main {
             graph[node2].add(node1);
         }
 
+        // 2. sorting graph
         for (int i = 1; i <= n; i++) {
             Collections.sort(graph[i]);
         }
 
+
+        //3. dfs and bfs
         dfs(v);
         sb.append('\n');
         bfs(v);
