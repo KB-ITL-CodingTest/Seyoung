@@ -12,11 +12,15 @@ public class Main {
     static boolean[] visited = new boolean[100001];
 
     public static void main(String[] args) throws IOException {
+        // 변수 입력과 초기화
         st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
 
+        // N이 K보다 큰 경우 -> 뒤로만 갈 수 있는 경우
         if (N >= K) System.out.println(N-K);
+
+        // 나머지의 경우 bfs 수행
         else System.out.println(bfs());
     }
 
