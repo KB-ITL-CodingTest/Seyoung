@@ -16,7 +16,7 @@ public class Main {
     static int[] dy = {-1, 0, 1, 0};
     static int days = 0;
     public static void main(String[] args) throws IOException {
-		    // init var
+	// 변수 초기화
         st = new StringTokenizer(br.readLine());
         M = Integer.parseInt(st.nextToken());
         N = Integer.parseInt(st.nextToken());
@@ -30,7 +30,7 @@ public class Main {
             }
         }
         
-        // start logic
+        // 로직 수행
         initQueue();
         bfs();
         if (isRipened()) System.out.println(days);
