@@ -15,16 +15,20 @@ public class Main {
     static boolean[][] visited;
 
     public static void main(String[] args) throws IOException {
+        // 변수 초기화
         N = Integer.parseInt(br.readLine());
         grid = new char[N][N];
-    
+
+
+        // 적록색약이 아닌 경우에 대한 그리드
         for (int i = 0; i < N; i++) {
             String tmp = br.readLine();
             for (int j = 0; j < N; j++) {
                 grid[i][j] = tmp.charAt(j);
             }
         }
-        
+
+        // 영역 개수 파악
         int count1 = 0;
         visited = new boolean[N][N];
         for (int i = 0; i < N; i++) {
@@ -38,7 +42,8 @@ public class Main {
         }
         System.out.print(count1 + " ");
 
-        
+
+        // 적록색약인 경우에 대한 그리드
         for (int i = 0; i < N; i++) {
             Arrays.fill(visited[i], false);
             for (int j = 0; j < N; j++) {
@@ -46,6 +51,7 @@ public class Main {
             }
         }
 
+        // 영역 개수 파악 
         int count2 = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
