@@ -18,6 +18,7 @@ public class Main {
     static int[] visited;
 
     public static void main(String[] args) throws IOException {
+        // 변수 초기화
         N = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine());
         v1 = Integer.parseInt(st.nextToken());
@@ -26,10 +27,14 @@ public class Main {
         graph = new ArrayList[N+1];
         visited = new int[N+1];
 
+
+        // 그래프 초기화
         for (int i = 1; i <= N; i++) {
             graph[i] = new ArrayList<>();
         }
 
+
+        // 그래프 추가
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             x = Integer.parseInt(st.nextToken());
