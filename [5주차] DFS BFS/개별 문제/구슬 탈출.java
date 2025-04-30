@@ -62,7 +62,7 @@ public class Main {
 
     static int bfs(char[][] board, boolean[][][][] visited, int ey, int ex, Beads init) {
         ArrayDeque<Beads> q = new ArrayDeque<>();
-        q.offer(init); 
+        q.offer(init);
         visited[init.ry][init.rx][init.by][init.bx] = true;
 
         while (!q.isEmpty()) {
@@ -73,15 +73,15 @@ public class Main {
 
             // 4방향으로 구슬을 굴려보기
             for (int d = 0; d < 4; d++) {
-                int nry = beads.ry
+                int nry = beads.ry;
                 int nrx = beads.rx;
-                int nby = beads.by
+                int nby = beads.by;
                 int nbx = beads.bx;
-                
-                boolean redFlag = false
+
+                boolean redFlag = false;
                 boolean blueFlag = false;
-                
-                int rCount = 0
+
+                int rCount = 0;
                 int bCount = 0;
 
                 // 빨간 구슬 이동
